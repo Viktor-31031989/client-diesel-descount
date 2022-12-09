@@ -25,8 +25,6 @@ function Results({el}) {
             })
     }
 
-
-
     return (
         <>
             {isLoading ? '...loading' :
