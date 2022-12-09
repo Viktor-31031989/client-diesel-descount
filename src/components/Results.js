@@ -38,7 +38,7 @@ function Results({el}) {
                     {DB.filter(item => item.City === el.city && item.State === el.state).map(filteredDB => (
                         <tr>
                             <TableList
-                                key={filteredDB._id}
+                                key={filteredDB.id}
                                 filteredDB={filteredDB}
                                 el={el}
                             />
