@@ -28,11 +28,11 @@ function Results({el}) {
     return (
         <>
             {isLoading ? '...loading' :
-                <table border={1}>
+                <table border={1} style={{border: "1px"}}>
                     <thead>
 
                     </thead>
-                    <tbody>
+                    <tbody style={{fontSize: "10px"}}>
                     {DB.filter(item => item.City === el.city && item.State === el.state).map(filteredDB => (
                         <tr>
                             <TableList

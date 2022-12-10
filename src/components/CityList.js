@@ -1,4 +1,3 @@
-import React, {useState} from 'react';
 import Results from "./Results";
 
 function CityList({el, setCityName, cityName}) {
@@ -8,17 +7,16 @@ function CityList({el, setCityName, cityName}) {
     }
 
     return (
-        <>
-            <div>
+        <div style={{margin: "10px"}}>
+            <div style={{display: "flex", justifyContent: "flex-end", margin: "20px 0 3px 0"}}>
                 {`${el.city}, ${el.state}`}
-                <button onClick={() => deleteHandler(el.id)}>X</button>
+                <button onClick={() => deleteHandler(el.id)} style={{marginLeft: "5px", color: "red"}}>X</button>
             </div>
 
             <Results
                 el={el}
             />
-            <hr/>
-        </>
+        </div>
     );
 }
 
